@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <form method="post" th:action="@{/save}" th:object="${makeupItem}">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    Name:<input th:field="*{name}">
+
+                </div>
+                <div class="input-group">
+                    Description:<input th:field="*{description}">
+
+                </div>
+
+                <div class="input-group">
+                    Rate:<input th:field="*{rate}">
+                </div>
+
+                <div class="input-group">
+                <span class="input-group-btn">
+                        <input type="submit" class="btn_search" value="Save"/>
+                        </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
