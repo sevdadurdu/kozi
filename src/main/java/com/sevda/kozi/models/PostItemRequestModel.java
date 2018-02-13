@@ -1,30 +1,15 @@
-package com.sevda.kozi;
+package com.sevda.kozi.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class MakeupItem {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+/**
+ * Created by Toshibaa on 13.2.2018.
+ */
+public class PostItemRequestModel {
 
     private String name;
 
     private String description;
 
     private Double rate;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
